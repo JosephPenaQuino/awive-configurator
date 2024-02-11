@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "awivec"
+version = "0.1.0"
+description = ""
+authors = ["Joseph P. <joseph.pena.q@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "~3.11.2"
+awive = {path = "../adaptive-water-image-velocimetry-estimator", develop = true}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
