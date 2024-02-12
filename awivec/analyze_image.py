@@ -8,12 +8,12 @@ from npyplotter.plot_npy import picshow
 import numpy as np
 
 from awive.correct_image import Formatter
-from awive.loader import Loader, get_loader
+from awive.loader import Loader, make_loader
+from awive.config import Config
 
 
 def main(
     config_path: str,
-    video_identifier: str,
     entire_frame=False,
     undistort=True,
     roi=True,
@@ -21,8 +21,9 @@ def main(
     plot=False
 ) -> None:
     """Save the first image as numpy file."""
-    loader: Loader = get_loader(config_path, video_identifier)
-    formatter = Formatter(config_path, video_identifier)
+    config = Config.from_json(config_path)
+    loader: Loader = make_loader(config.dataset)
+    formatter = Formatter(config)
     image: np.ndarray = loader.read()
     if get_frame:
         cv2.imwrite("image.png", image)
@@ -61,10 +62,6 @@ if __name__ == "__main__":
         help="Path to configuration file path",
     )
     parser.add_argument(
-        "video_identifier",
-        help="Index of the video of the json config file",
-    )
-    parser.add_argument(
         "-f",
         "--frame",
         action="store_true",
@@ -92,7 +89,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
     main(
         config_path=args.config_path,
-        video_identifier=args.video_identifier,
         entire_frame=args.frame,
         undistort=args.undistort,
         roi=args.roi,
