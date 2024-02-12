@@ -1,0 +1,126 @@
+{
+    "dataset": {
+        "name": "Paper of OTV but from other paper",
+        "image_dataset": "examples/datasets/river-brenta/images",
+        "image_number_offset": 0,
+        "image_path_prefix": "",
+        "image_path_digits": 4,
+        "video_path": "examples/datasets/river-brenta/river_brenta.avi",
+        "width": 3840,
+        "height": 2160,
+        "ppm": 200,
+        "gcp": {
+            "apply": false,
+            "pixels": {
+                "x": [725, 886, 1027, 1229],
+                "y": [540, 540, 540, 540]
+            },
+            "meters": {
+                "x": [0.25, 4.25, 4.50, 0.00],
+                "y": [0.30, 0.20, 3.50, 3.50]
+            },
+            "ground_truth": [
+                {
+                    "position": [582, 443],
+                    "velocity": 0.45675
+                },
+                {
+                    "position": [423, 417],
+                    "velocity": 0.44891
+                },
+                {
+                    "position": [282, 394],
+                    "velocity": 0.31224
+                },
+                {
+                    "position": [82, 367],
+                    "velocity": 0.31975
+                }
+            ]
+        }
+    },
+    "preprocessing": {
+        "rotate_image": 99,
+        "pre_roi": {
+            "h1": 0,
+            "h2": 4000,
+            "w1": 0,
+            "w2": 4000
+        },
+        "roi": {
+            "h1": 200,
+            "h2": 1100,
+            "w1": 200,
+            "w2": 1400
+        },
+        "image_correction": {
+            "apply": false,
+            "k1": -10.0e-6,
+            "c": 2,
+            "f":8.0
+        }
+    },
+    "otv": {
+        "mask_path": "",
+        "pixel_to_real": 0.004965,
+        "partial_min_angle": 135,
+        "partial_max_angle": 225,
+        "final_min_angle": 160,
+        "final_max_angle": 200,
+        "final_min_distance": 216,
+        "max_features": 7000,
+        "region_step": 240,
+        "resolution": 1,
+        "features": {
+            "maxcorner": 300,
+            "qualitylevel": 0.2,
+            "mindistance": 4,
+            "blocksize": 2
+        },
+        "lk" : {
+            "winsize": 15,
+            "max_level": 4,
+            "max_count": 20,
+            "epsilon": 0.03,
+            "flags": 0,
+            "radius": 7,
+            "min_eigen_threshold": 0.001
+        },
+        "lines" : [
+            582,
+            423,
+            282,
+            82
+        ]
+    },
+    "stiv": {
+        "window_shape": [51, 51],
+        "filter_window": 11,
+        "overlap": 31,
+        "ksize": 7,
+        "polar_filter_width": 2,
+        "lines": [
+            {
+                "start": [30, 10],
+                "end": [31, 200]
+            },
+            {
+                "start": [60, 10],
+                "end": [61, 200]
+            },
+            {
+                "start": [100, 10],
+                "end": [101, 200]
+            },
+            {
+                "start": [130, 10],
+                "end": [131, 200]
+            },
+            {
+                "start": [160, 10],
+                "end": [161, 200]
+            }
+        ]
+    }
+}
+

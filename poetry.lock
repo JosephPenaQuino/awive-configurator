@@ -629,7 +629,7 @@ pydocstyle = "^6.1.1"
 [package.source]
 type = "git"
 url = "https://github.com/JosephPenaQuino/npy-plotter.git"
-reference = "v0.1.2"
+reference = "HEAD"
 resolved_reference = "035605827b9aa9041821a1cd697a2762e48b71fa"
 
 [[package]]
@@ -1229,4 +1229,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "~3.11.2"
-content-hash = "a778171d5e1b3616ce72eb5a73313efeb55b31d77a38091648a89f90369c040e"
+content-hash = "fe562ab7525a54f1214efe12e15f63bc7800a34477b95a3c6805f8163a5a2f0b"
