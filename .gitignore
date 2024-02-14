@@ -177,3 +177,5 @@ pyrightconfig.json
 
 *.npy
 *.avi
+*.mp4
+*.json
