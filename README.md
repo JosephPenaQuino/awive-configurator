@@ -4,8 +4,6 @@ determine the configuration used for the [awive](https://github.com/JosephPenaQu
 project.
 
 
-[[_TOC_]]
-
 ## Getting Started
 
 ### Prerequisites
