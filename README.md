@@ -37,6 +37,7 @@ python -m pip install .
 The awive configurator have the following features:
 
 - image analyzer
+- AWIVE runner
 
 Before attempting to use any feature, crete your own configuration file:
 
@@ -75,7 +76,26 @@ the direction of the river aligns with 0 degrees, making it a horizontal line.
 Finally, modify the `preprocessing.roi` key to encompass only the water in the
 image.
 
+### AWIVE Runner
+
+When the `config.json` file is ready, run the command below:
+
+```bash
+python -m awivec.run_awive config.json -v
+```
+
+Then, a video like the one shown below should be displayed.
+
+<center>
+    <img src="docs/images/otv-river.gif">
+</center>
+
+
 ## Roadmap
+
+TODOs to version v0.2.0:
+
+- [ ] Add steps to configure orthorectification
 
 TODOs to version v1.0.0:
 
