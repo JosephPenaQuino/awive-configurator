@@ -38,7 +38,9 @@ if __name__ == "__main__":
         help='Show video'
     )
     args = parser.parse_args()
-    run_otv(
+    x = run_otv(
         config_path=args.config_path,
         show_video=args.show_video,
     )
+    for key, value in x.items():
+        print(f"{key}: velocity: {round(value['velocity'],4)}, count: {value['count']}")

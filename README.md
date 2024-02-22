@@ -3,6 +3,8 @@ The AWIVE configurator is a software used to analyze images in order to
 determine the configuration used for the [awive](https://github.com/JosephPenaQuino/adaptive-water-image-velocimetry-estimator)
 project.
 
+[[TOC]]
+
 
 ## Getting Started
 
@@ -60,6 +62,42 @@ Then, execute the command below to just visualize a frame from the video:
 python -m awivec.analyze_image config.json -P
 ```
 
+It should display some image like the one shown below:
+
+![]()
+
+
+Probably the displayed image is not suitable for any of AWIVE velocimetry
+algorithms. Thus, the following steps must be done in order to calibrate the
+parameters of the `config.json` file:
+
+1. Orthorectification
+2. Pre-Region of Interest
+3. Image rotation
+4. Region of Interest
+5. Image Correction
+
+#### 1. Orthorectification
+
+The orthorectification pre-processing is necessary when the images in the video
+are not distorted due to the camera's location, which means the camera that
+recorded the video was not positioned in front of the river.
+
+To calibreate the orthorectification parameters there are required four
+ground-control-points (GCPs).
+
+#### 2. Pre-Region of Interest
+
+
+#### 3. Image rotation
+
+
+#### 4. Region of Interest
+
+
+#### 5. Image Correction
+
+
 Then, checkout how the image looks with the awive pre-processing, perhaps the
 default configuration might generate an unusable image. Edit the keys of
 `preprocessing` in the `config.json` file.
@@ -89,11 +127,27 @@ Then, a video like the one shown below should be displayed.
 </center>
 
 
+Considerations:
+
+- the river must be flowing to the left, that is in angle 180
+- to find the coordinates, such as I only had the distances between the GCPs
+I had to use Geogebra to find out the coordinates in a cardinal plane. then
+I wrote those coordinates in the config.json and add offset to not use negative
+numbers but Actually I don't know if negative'll break the code or not.
+
+## Changelog
+
+
 ## Roadmap
 
 TODOs to version v0.2.0:
 
 - [ ] Add steps to configure orthorectification
+- [ ] Add steps to configure OTV parameters: lines, pixel to real, angles, distances
+
+TODOs to version v0.3.0:
+
+- [ ] Add steps to configure STV parameters
 
 TODOs to version v1.0.0:
 
