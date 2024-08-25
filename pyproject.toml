@@ -11,6 +11,9 @@ npyplotter = {git = "https://github.com/JosephPenaQuino/npy-plotter.git"}
 awive = "^2.0.0"
 
 
+[tool.poetry.group.dev.dependencies]
+debugpy = "^1.8.5"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
