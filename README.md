@@ -136,19 +136,3 @@ I wrote those coordinates in the config.json and add offset to not use negative
 numbers but Actually I don't know if negative'll break the code or not.
 
 ## Changelog
-
-
-## Roadmap
-
-TODOs to version v0.2.0:
-
-- [ ] Add steps to configure orthorectification
-- [ ] Add steps to configure OTV parameters: lines, pixel to real, angles, distances
-
-TODOs to version v0.3.0:
-
-- [ ] Add steps to configure STV parameters
-
-TODOs to version v1.0.0:
-
-- [ ] Implement a Graphic User Interface
