@@ -3,8 +3,6 @@ The AWIVE configurator is a software used to analyze images in order to
 determine the configuration used for the [awive](https://github.com/JosephPenaQuino/adaptive-water-image-velocimetry-estimator)
 project.
 
-[[TOC]]
-
 
 ## Getting Started
 
